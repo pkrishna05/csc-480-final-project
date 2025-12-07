@@ -46,7 +46,7 @@ The workflow consists of several key components:
 
 - **Python 3.8+**
 - **API Keys**: 
-  - `GEMINI_API_KEY` or `GOOGLE_API_KEY` for Google's Gemini models
+  - `GEMINI_API_KEY` and `GOOGLE_API_KEY` for Google's Gemini models
   - Configured in your environment or `.env` file
 
 ## Installation
@@ -77,7 +77,6 @@ The workflow consists of several key components:
    Create a `.env` file in the project root:
    ```bash
    GEMINI_API_KEY=your_api_key_here
-   # OR
    GOOGLE_API_KEY=your_api_key_here
    ```
 
@@ -237,36 +236,3 @@ python main.py . examples/simple_example.py examples/simple_example_test.py
 4. **Test Execution Failures**:
    - Ensure your test file uses a compatible test framework (unittest, pytest, etc.)
    - Check that test dependencies are available
-
-## Project Structure
-
-```
-csc-480-final-project/
-├── src/
-│   ├── ach_workflow.py          # Main workflow facade
-│   ├── chunker.py                # Code chunking (LLM/AST)
-│   ├── llm_client.py             # LLM interaction wrapper
-│   ├── llm_orchestrator.py       # LLM operation orchestration
-│   ├── mutation_pipeline.py      # 7-step mutation pipeline
-│   ├── parallel_processor.py     # Parallel execution
-│   ├── repo_manager.py           # Repository management
-│   ├── stitcher.py               # File reconstruction
-│   ├── validators.py             # Code validation
-│   └── workflow_orchestrator.py  # High-level orchestration
-├── prompts/
-│   └── templates.py              # LLM prompt templates
-├── examples/                      # Example code and tests
-├── outputs/                       # Generated mutants and tests
-├── constants.py                   # Configuration constants
-├── main.py                        # CLI entry point
-├── requirements.txt              # Python dependencies
-└── README.md                      # This file
-```
-
-## Contributing
-
-This is a research project. For questions or issues, please refer to the paper or contact the maintainers.
-
-## License
-
-See the repository license file for details.
