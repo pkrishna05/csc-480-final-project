@@ -236,3 +236,8 @@ python main.py . examples/simple_example.py examples/simple_example_test.py
 4. **Test Execution Failures**:
    - Ensure your test file uses a compatible test framework (unittest, pytest, etc.)
    - Check that test dependencies are available
+
+
+## Contributing
+
+This is a research project. For questions or issues, please contact the maintainers on github.
